@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Safer Roads PH</title>
 
     <style>
         body {
@@ -28,7 +30,7 @@
 
         .container {
             display: flex;
-            height: 90vh;
+            height: calc(100vh - 120px); /* Adjust height to make space for footer */
             background-color: #121212;
         }
 
@@ -65,14 +67,27 @@
             height: 100%;
             border: none;
         }
+
+        /* Fixed bottom banner */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1f1f1f;
+            color: #cccccc;
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #00bcd4;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Road Safety for the Philippines</h1>
-    <p>My advocacy for  safer roads for everyone</p>
+    <h1>Safer Roads Philippines</h1>
+    <p>Advocating for better and safer roads for every Filipino</p>
 </header>
 
 <div class="container">
@@ -81,13 +96,18 @@
         <button onclick="loadPage('home.html')">Home</button>
         <button onclick="loadPage('issues.html')">Road Issues</button>
         <button onclick="loadPage('solutions.html')">Solutions</button>
-        <button onclick="loadPage('gallery.html')">Images</button>
+        <button onclick="loadPage('gallery.html')">Gallery</button>
     </div>
 
     <div class="content">
         <iframe id="frame" src="home.html"></iframe>
     </div>
 
+</div>
+
+<!-- Bottom Banner -->
+<div class="footer">
+    Paving a road to a better future. | April 2026
 </div>
 
 <script>
